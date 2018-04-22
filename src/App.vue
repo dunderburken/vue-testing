@@ -4,7 +4,9 @@
     <h1>{{$route.params.id}}</h1>
     <div>Menu</div>
     <router-link to="/">Hello Wrold</router-link>
-    <router-link v-bind:key="item" v-for="item in [1,2,3,4]" to="{path:'/demo/id' + item}">Demo</router-link>
+    <router-link to="/demo/666">Demo</router-link>
+    <router-link v-bind:key="item" v-for="item in [1,2,3,4]" :to="{path:'/demo/' + item}">Demo {{item}}</router-link>
+    <router-link v-bind:key="item" v-for="item in [11,12,13,14]" :to="{name:'Demo', params:{id: item}}">Demo {{item}}</router-link>
     <transition name="fade">
       <router-view/>
     </transition>

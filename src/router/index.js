@@ -15,7 +15,8 @@ export default new Router({
     {
       path: '/demo/:id',
       name: 'Demo',
-      component: Demo
+      component: Demo,
+      props: true
     }
   ]
 })
