@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Menu></Menu>
     <img src="./assets/logo.png">
     <h1>{{$route.params.id}}</h1>
     <div>Menu</div>
@@ -14,8 +15,11 @@
 </template>
 
 <script>
+import Menu from './components/Menu'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: { Menu },
 }
 </script>
 
